@@ -44,6 +44,18 @@ def convert_to_list(number):
     return storage_list
 
 def cows_bulls(guess,random_number):
+    '''
+    or every digit that the user guessed correctly in the correct place, they have a
+    “cow”. For every digit the user guessed correctly in the wrong place is a “bull”.
+    Every time the user makes a guess, tell them how many “cows” and “bulls” they
+    have. Once the user guesses the correct number, the game is over. Keep track of
+    the number of guesses the user makes throughout the game and tell the user at
+    the end.
+
+    :param guess:
+    :param random_number:
+    :return:
+    '''
     guess = convert_to_list(guess)
     number = convert_to_list(random_number)
     cows = 0
@@ -57,14 +69,16 @@ def cows_bulls(guess,random_number):
     return (cows, (bulls-cows))
 
 
-
-
-
-
 random_number = random.randint(0,9999)
 # initial value
 guess = -1
-
+COW_INDEX = 0
+BULL_INDEX = 1
+iterations = 0
 while not check_guess(guess,random_number):
+    iterations += 1
     guess = str(input("Please enter your guess:"))
     cows_bulls_score = cows_bulls(guess,random_number)
+    print(" You had %s cows and $s bulls" %(cows_bulls_score[COW_INDEX], cows_bulls_score[BULL_INDEX]))
+
+print("Congrats you did it! That took %s goes" % iterations)
