@@ -44,11 +44,18 @@ def convert_to_list(number):
     return storage_list
 
 def cows_bulls(guess,random_number):
+    guess = convert_to_list(guess)
+    number = convert_to_list(random_number)
+    cows = 0
+    bulls = 0
+    for index_guess in range(0,len(guess)):
+        if guess[index_guess] in random_number:
+            bulls += 1
+            for index_random in range(0,len(guess)):
+                if guess[index_guess] == number[index_random] and index_guess == index_random:
+                    cows += 1
+    return (cows, (bulls-cows))
 
-    for index in range(0,len(guess)):
-        if number in random_number:
-            for correct_number in random_number:
-                if number == correct_number
 
 
 

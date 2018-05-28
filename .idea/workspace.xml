@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e059c8a8-7054-4e2c-a066-5e454bbdfaa2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/P3-question6.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/P3_question4.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/P3_question4b.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/question5.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/practicalmock.iml" afterPath="$PROJECT_DIR$/.idea/practicalmock.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/P3-question6.py" afterPath="$PROJECT_DIR$/P3-question6.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -105,8 +105,8 @@
       <file leaf-file-name="P3-question6.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/P3-question6.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+            <state relative-caret-position="433">
+              <caret line="56" column="31" lean-forward="true" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -444,8 +444,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/P3-question6.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+        <state relative-caret-position="433">
+          <caret line="56" column="31" lean-forward="true" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
           <folding />
         </state>
       </provider>
