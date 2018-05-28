@@ -16,12 +16,18 @@ def find_grades(data):
     iteration = 0
     scores = {}
     for line in data:
-        if line[STUDENT_ID] != "XXX":
+        # turn into a list
+        line = line.split()
+        print(line[STUDENT_ID])
+        if line[STUDENT_ID] != "999":
             if iteration == 0:
-                answers = line.split()
+                answers = line
+                print(len(answers))
             else:
                 # includes student id
-                student_grade = line.split()
+                student_grade = line
+                print("sg is")
+                print(len(student_grade))
                 student_score = 0
                 for i in range(0,len(answers)):
                     # check correct answer
@@ -30,7 +36,14 @@ def find_grades(data):
                     # check for incorrect answer
                     elif answers[i] != student_grade[i+1] and student_grade[i+1] != "x":
                         student_score -= 1
-                scores[student_grade[STUDENT_ID]] == student_score
+                scores[student_grade[STUDENT_ID]] = student_score
+            iteration += 1
     return scores
 
-print(find_grades(openfile("grades.txt")))
+def main():
+    data = openfile("grades.txt")
+    output = find_grades(data)
+    for key,value in output.items():
+        print(" Student %s: Score : %s" %(str(key), str(value)))
+
+main()
