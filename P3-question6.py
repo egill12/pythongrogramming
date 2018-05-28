@@ -64,16 +64,19 @@ def cows_bulls(guess,random_number):
     cows = 0
     bulls = 0
     for index_guess in range(0,len(guess)):
+        #
         if guess[index_guess] in random_number:
             bulls += 1
+            #
             for index_random in range(0,len(guess)):
+                #
                 if guess[index_guess] == number[index_random] and index_guess == index_random:
                     cows += 1
     # I count all bulls first, then find out how many cows there were, t fiund bulls i need to subtract the number of cows found..
     return (cows, bulls-cows)
 
 
-random_number = "1234" #  random.randint(0,9999)
+random_number = random.randint(1000,9999)
 # initial value
 guess = -1
 COW_INDEX = 0
