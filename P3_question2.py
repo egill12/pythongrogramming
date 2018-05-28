@@ -11,10 +11,12 @@ def is_prime(number):
     :param number:
     :return:
     '''
+    is_prime = True
     for i in range(2,num):
-        if num % i == 0:
-            return False
-        else:
-            return True
+        if (num % i) == 0:
+            is_prime = False
+    return is_prime
+
 num = int(input("Enter number :"))
-print(is_prime())
+
+print(is_prime(num))
