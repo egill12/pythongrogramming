@@ -5,10 +5,10 @@ def fibonacci(n):
         return 1
     else:
         return fibonacci(n-1) + fibonacci(n-2)
-
-for i in range(0,20):
+# up to and exclusive of 10
+for i in range(0,10):
     print(fibonacci(i), end = " ")
 
-for i in range(0,2000):
+for i in range(0,5):
     print(fibonacci(i), end = " ")
 print(i)
