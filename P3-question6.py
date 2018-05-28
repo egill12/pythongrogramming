@@ -32,6 +32,7 @@ def check_guess(guess,random_number):
     :return:
     '''
     return guess == random_number
+
 def convert_to_list(number):
     '''
 
@@ -57,7 +58,9 @@ def cows_bulls(guess,random_number):
     :return:
     '''
     guess = convert_to_list(guess)
+    print(guess)
     number = convert_to_list(random_number)
+    print(number)
     cows = 0
     bulls = 0
     for index_guess in range(0,len(guess)):
@@ -66,10 +69,11 @@ def cows_bulls(guess,random_number):
             for index_random in range(0,len(guess)):
                 if guess[index_guess] == number[index_random] and index_guess == index_random:
                     cows += 1
-    return (cows, (bulls-cows))
+    # I count all bulls first, then find out how many cows there were, t fiund bulls i need to subtract the number of cows found..
+    return (cows, bulls-cows)
 
 
-random_number = random.randint(0,9999)
+random_number = "1234" #  random.randint(0,9999)
 # initial value
 guess = -1
 COW_INDEX = 0
@@ -79,6 +83,6 @@ while not check_guess(guess,random_number):
     iterations += 1
     guess = str(input("Please enter your guess:"))
     cows_bulls_score = cows_bulls(guess,random_number)
-    print(" You had %s cows and $s bulls" %(cows_bulls_score[COW_INDEX], cows_bulls_score[BULL_INDEX]))
+    print("You had %s cows and %s bulls" %(str(cows_bulls_score[COW_INDEX]), str(cows_bulls_score[BULL_INDEX])))
 
-print("Congrats you did it! That took %s goes" % iterations)
+print("Congrats you did it! That took %s goes" % str(iterations))
