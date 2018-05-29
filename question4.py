@@ -18,16 +18,14 @@ def find_grades(data):
     for line in data:
         # turn into a list
         line = line.split()
-        print(line[STUDENT_ID])
+        # check if we are end of file
         if line[STUDENT_ID] != "999":
+            # first line is always the answers
             if iteration == 0:
                 answers = line
-                print(len(answers))
             else:
                 # includes student id
                 student_grade = line
-                print("sg is")
-                print(len(student_grade))
                 student_score = 0
                 for i in range(0,len(answers)):
                     # check correct answer
@@ -36,6 +34,7 @@ def find_grades(data):
                     # check for incorrect answer
                     elif answers[i] != student_grade[i+1] and student_grade[i+1] != "x":
                         student_score -= 1
+                # add score to the dict with student id is a key
                 scores[student_grade[STUDENT_ID]] = student_score
             iteration += 1
     return scores
